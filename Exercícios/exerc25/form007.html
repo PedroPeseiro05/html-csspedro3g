@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <label for="idist">Distritos</label>
+            <select name="dist" id="idist">
+                <option value="" select>---Escolha---</option>
+                <optgroup label="Região Norte">
+                    <option value="BRG">Braga</option>
+                    <option value="PRT">Porto</option>
+                    <option value="AVR">Aveiro</option>
+                </optgroup>
+                <optgroup label="Região Centro">
+                    <option value="SAN">Santarém</option>
+                    <option value="LIS">Lisboa</option>
+                    <option value="COI">Coimbra</option>
+                </optgroup>
+                <optgroup label="Região Sul">
+                    <option value="FAR">Faro</option>
+                    <option value="SET">Setúbal</option>
+                    <option value="BEJ">Beja</option>
+                </optgroup>
+                <optgroup label="Região Ilhas">
+                    <option value="AÇR">Açores</option>
+                    <option value="MDR">Madeira</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <label for="iprof">Profissões</label>
+            <input type="text" name="prof" id="iprof" list="lstprof">
+            <datalist id="lstprof">
+                <option value="ADM">Administrador</option>
+                <option value="CONT">Contabilista</option>
+                <option value="PRF">Professor</option>
+                <optiongroup label="Novas tecnologias">
+                    <option value="INF">Informático</option>
+                    <option value="DES">Desenvolvedor</option>
+                </optiongroup>
+            </datalist>
+            <p>
+                <label for="imsg">Mensagem</label><br>
+                <textarea name="msg" id="imsg" cols="50" rows="20"></textarea>
+            </p>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
