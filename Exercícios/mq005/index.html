@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="estilos/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <main>
         <h1>Meu Site</h1>
         <span id="burger" class="material-icons" onclick="clickMenu()">Menu</span>
@@ -51,6 +51,14 @@
         </article>
     </main>
     <script>
+        function mudouTamanho() {
+            if(window.innerWidth == ) {
+                window.innerWidth =
+            }
+            else {
+                
+            }
+        }
         function clickMenu() {
             if (items.style.display == 'block') {
                 items.style.display = 'home'
