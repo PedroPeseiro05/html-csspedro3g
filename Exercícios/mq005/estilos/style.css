@@ -19,6 +19,15 @@ header > h1 {
     text-align: center;
 }
 
+span#burger {
+    background-color: rgb(48, 48, 48);
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
 menu {
     display: block;
 }
@@ -35,6 +44,15 @@ menu > ul > li > a {
     background-color: rgb(87, 87, 87);
     color: white;
     border-top: 2px solid grey;
+}
+
+main {
+    width: 90vw;
+    background-color: white;
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 article > h2 {

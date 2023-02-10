@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Query</title>
     <link rel="stylesheet" href="estilos/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <main>
         <h1>Meu Site</h1>
+        <span id="burger" class="material-icons" onclick="clickMenu()">Menu</span>
+        <menu id="items">
         <header>
             <menu>
                 <ul>
@@ -47,5 +50,15 @@
             </p>
         </article>
     </main>
+    <script>
+        function clickMenu() {
+            if (items.style.display == 'block') {
+                items.style.display = 'home'
+            }
+            else {
+                
+            }
+        }
+    </script>
 </body>
 </html>
