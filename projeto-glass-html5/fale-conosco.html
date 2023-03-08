@@ -9,7 +9,13 @@
     <link rel="stylesheet" href="_css/form.css">
 </head>
 <script language="javascript" src="_javascript/funcoes.js"></script>
-
+<script>
+    function calc_total (); {
+      var qtd = parseInt(document.getElementById('iQtd').value)
+      tot = qtd * 250
+      document.getElementById('iTot').value = tot
+    }
+</script>
 <body>
     <div id="interface">
         <header id="cabecalho">
@@ -35,11 +41,11 @@
                     <hgroup>
                         <h3>Fale Conosco > Contato</h3>
                         <h1>Formulário de Contacto</h1>
-                        <h2>por Rui Santos</h2>
+                        <h2>por Pedro Peseiro</h2>
                         <h3 class="direita">Atualizado em 17/fevereiro/2023</h3>
                     </hgroup>
                 </header> 
-        <form method="post" id="fContacto" action="mailto:9530.pedropeseiro@alunos.ae-almeirim.pt">
+        <form method="post" id="fContacto" action="mailto:9530.pedropeseiro@alunos.ae-almeirim.pt" oninput="calc_total();">
             <fieldset id="utilizador"><legend>Identificação do Utilizador</legend><p><label for="iNome">Nome: </label>
             <input type="text" name="tNome" id="iNome" size="20" maxlength="30" placeholder="Nome Completo"></p>
         <p><label for="iSenha">Senha: </label><input type="password" name="tSenha" id="iSenha" size="8" maxlength="8" 
@@ -82,12 +88,12 @@
                     <option value="Raposa"></option>
                 </datalist>
         </Fieldset>
-        <fieldset id="Mensagem">
+        <fieldset id="mensagem">
             <legend>Mensagem do Utilizador</legend>
             <p><label for="iUrg">Grau de Urgência: </label>Min.<input type="range" name="tUrg" id="iUrg" min="0" max="10" step="2">Max.</p>
             <p><label for="iMen">Mensagem: </label><textarea name="tMen" id="iMen" cols="40" rows="5" placeholder="Escreva a sua mensagem"></textarea></p>
         </fieldset>
-        <fieldset>
+        <fieldset id="pagamento">
             <legend>Quero um Google Glass</legend>
             <p><input type="checkbox" name="tPed" id="iPed" checked><label for="iPed">Gostaria de aquirir um Google Glass quando disponível</label></p>
             <p><label for="iCor">Cor: </label><input type="color" name="tCor" id="iCor" value="#FF0000"></p>
